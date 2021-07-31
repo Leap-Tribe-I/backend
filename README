@@ -1,0 +1,31 @@
+- Data Cleaning nd Encoding
+- Correlation matrix
+- Data Splitting
+- Data feature importance
+- Model Evaluation
+- Tuning
+	With GridsearchCV
+	With RandomizedSearchCV
+- Accuracy Bar Graph
+- Modelling
+
+======================================================
+
+DataCleaningEncoding 
+	-> this contains data cleaning n encoding
+CorrelationMatrix
+	-> this contains correlation Matrix
+DataSplitting
+	-> this contains data spliting
+FeatureImportance 
+	-> this contains data feautre importance
+ModelEvaluation
+	-> this contains evaulation of model
+TuningWithGridSearchCV
+	-> this contains all GridSearchCV tuning
+TuningwithRandomSearchCV
+	-> this contains all RandomizedSearchCV tuning
+AccuracyBarGraph
+	-> this contains Accuracy Dict Graph plotting
+Modelling
+	-> this contains data modelling
