@@ -3,39 +3,46 @@ Leap 4.0 Major Project
 
 MentalGeek Presents Suicide Prediction Program
 
-## Modularized the Program 
-# How to run
-- for running download both the src folder and suicide.py file in one directory
-- next just run it with python command
+# Modularized the Program 
+## How to run
+- for running download both the src folder and main.py file in one directory
+- next just run main with python command
 
-# suicide.py file: 
+## main.py file: 
 This is the main file and everything will be called here for implementation, only this file will run as the program
 
-# dataCleaningEncoding.py file:
-It will clean and run the code
+## dataCleaningEncoding.py file:
+It will clean and Encode the data for the prediction models
 
-# correlationMatrix.py file:
-It will create a corelation matrix and polt a heat map showing the correlation
+## correlationMatrix.py file:
+It will create a corelation matrix and polt a heat map showing the correlation between different features
 
-# dataSplit.py file:
-It will split the data set into training and testing
+## dataSplit.py file:
+It will split the data set into training and testing sets
+training will be used to train the model and testing will be used to calculate the accuracy of the model
 
-# dataFeaturing.py file:
-It will determine the important feature
+## dataFeaturing.py file:
+It will determine the important features
 
-# tuningGrid.py file:
+## tuningGrid.py file:
 It will implement different prediction algorithms with GridSearch tuning method
 
 #tuningRand.py file:
 It will implement different prediciton algorithms with RandomSearch CV tuning method
 
-# modulEvaluator.py file: 
+## DnnClassifier.py
+It will implemented the DNN classifier from tensorflow for prediction
+
+## modulEvaluator.py file: 
 It will calculate the accuracy of the models
 
-# accuracyPlot.py file:
+## accuracyPlot.py file:
 It will plot the accuracy of all the implemented algorithms in a bar graph
 
-# Output
+## OutputCsv.py file:
+It will give a prediciton based on the input data and tell the people who require mental help
+
+## Output
 
 Correlation Matrix:
 
