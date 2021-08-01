@@ -8,7 +8,6 @@ def get_csv(model, X_test, y_pred_class):
     measure = pd.Series(X_test['depressed'], name='Measure')
     measure = pd.DataFrame(measure)
     output_data = measure.join(y_pred)
-    print(output_data)
     csv = pd.DataFrame(output_data)
-    file_name = '~/github/Suicide-Prediction/Suicide-Prediction/output/' + name +'.csv'
+    file_name = '~/github/Suicide-Prediction/Suicide-Prediction/output/' + name[0] +'.csv'
     csv.to_csv(file_name, header=True)

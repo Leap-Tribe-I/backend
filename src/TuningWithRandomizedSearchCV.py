@@ -31,7 +31,7 @@ def RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict):
     tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict)
     tuneBagging(X_train, X_test, y_train, y_test, accuracyDict)
     tuneStacking(X_train, X_test, y_train, y_test, accuracyDict)
-    final_plot(log, kn, dis, rand, boosting, bagging)
+    # final_plot(log, kn, dis, rand, boosting, bagging)
 
 # tuning the logistic regression model with RandomizedSearchCV
 def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
@@ -54,7 +54,8 @@ def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     log = [actual_counts[1], predicted_counts[1]]
-    get_csv(lr, X_test, y_pred_class)
+    LR = 'LogisticRegressionRand'
+    get_csv(LR, X_test, y_pred_class)
 
 # tuning the KNN model with RandomizedSearchCV
 def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
@@ -76,7 +77,8 @@ def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     kn = [actual_counts[1], predicted_counts[1]]
-    get_csv(knn, X_test, y_pred_class)
+    KNN = 'KNeighborsClassifierRand'
+    get_csv(KNN, X_test, y_pred_class)
 
 # tuning the Decision Tree model with RandomizedSearchCV
 def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
@@ -98,7 +100,8 @@ def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     dis = [actual_counts[1], predicted_counts[1]]
-    get_csv(dt, X_test, y_pred_class)
+    DT = 'DecisionTreeClassifierRand'
+    get_csv(DT, X_test, y_pred_class)
 
 # tuning the Random Forest model with RandomizedSearchCV
 def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
@@ -121,7 +124,8 @@ def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     rand = [actual_counts[1], predicted_counts[1]]
-    get_csv(rf, X_test, y_pred_class)
+    RF = 'RandomForestRand'
+    get_csv(RF, X_test, y_pred_class)
 
 # tuning boosting model with RandomizedSearchCV
 def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
@@ -142,7 +146,8 @@ def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     boosting = [actual_counts[1], predicted_counts[1]]
-    get_csv(ada, X_test, y_pred_class)
+    ADA = 'AdaBoostClassifierRand'
+    get_csv(ADA, X_test, y_pred_class)
 
 # tuning bagging model with RandomizedSearchCV
 def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
@@ -165,7 +170,8 @@ def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     bagging = [actual_counts[1], predicted_counts[1]]
-    get_csv(bag, X_test, y_pred_class)
+    BAG = 'BaggingClassifierRand'
+    get_csv(BAG, X_test, y_pred_class)
 
 # # tuning stacking model with RandomizedSearchCV
 def tuneStacking(X_train, X_test, y_train, y_test, accuracyDict):
@@ -187,4 +193,5 @@ def tuneStacking(X_train, X_test, y_train, y_test, accuracyDict):
     unique, predicted_counts = np.unique(y_pred_class, return_counts=True)
     actual_counts = y_test.value_counts().tolist()
     stacker = [actual_counts[1], predicted_counts[1]]
-    get_csv(stack, X_test, y_pred_class)
+    STACK = 'StackingClassifierRand'
+    get_csv(STACK, X_test, y_pred_class)

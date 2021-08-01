@@ -1,3 +1,4 @@
+import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -46,9 +47,16 @@ def tensorflow_dnn(data, X_train, y_train,X_test, y_test, accuracyDict):
 
     model = tf.estimator.DNNClassifier(feature_columns=feature_columns,  hidden_units=[50, 40, 10], optimizer= tf.keras.optimizers.Adagrad(), batch_norm=True)
     model.train(input_fn=lambda:train_input(X_train, y_train, 100), steps = 1000)
-
     result = model.evaluate(input_fn=lambda:eval_input(X_test, y_test, 100))
-    print(result)
     accuracy = result['accuracy'] *100
     accuracyDict['DNN Classifier'] = accuracy
+
+    #making arguments to send for OutputCsv
+    y_pred_class = []
+    #model.predict() function takes the same input function as evaluate
+    #the key class_ids stores the corresponding value of the prediciton the model made
+    for single_prediction in model.predict(input_fn=lambda:eval_input(X_test, y_test, 50)):
+        for key, value in single_prediction.items():
+            if key == 'class_ids':
+                y_pred_class.append(value[0])
     get_csv("DNNClassifier", X_test, y_pred_class)
