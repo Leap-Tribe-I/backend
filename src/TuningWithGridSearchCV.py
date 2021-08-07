@@ -1,11 +1,14 @@
-# ignore all warnings
 import warnings
-warnings.filterwarnings("ignore")
+# run block of code and catch warnings
+with warnings.catch_warnings():
+	# ignore all caught warnings
+	warnings.filterwarnings("ignore")
+	# execute code that will generate warnings
 
 # importing from src
 from src.ModelEvaluation import evalModel
-from src.OutputCsv import get_csv
-# from numba import jit
+from src.output import get_csv_output
+
 # sklearn module for tuning
 from sklearn.model_selection import GridSearchCV
 
@@ -24,21 +27,19 @@ def GridSearch(X_train, X_test, y_train, y_test, accuracyDict):
     tuneKNN(X_train, X_test, y_train, y_test, accuracyDict)
     tuneDT(X_train, X_test, y_train, y_test, accuracyDict)
     tuneRF(X_train, X_test, y_train, y_test, accuracyDict)
-    # tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict)
-    # tuneBagging(X_train, X_test, y_train, y_test, accuracyDict)
+    tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict)
+    tuneBagging(X_train, X_test, y_train, y_test, accuracyDict)
     tuneStacking(X_train, X_test, y_train, y_test, accuracyDict)
-
-
 
 # tuning the logistic regression model with Gridsearchcv
 def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
     global lr
     print("\nTuning the Logistic Regression Model with GridSearchCV\n")
-    param_grid = {'C':[0.1,0.2,1,10,100,1000],
+    param_grid = {'C':[0.1,1,10,100,1000],
                   'solver':['newton-cg','lbfgs','sag'],
                   'multi_class':['ovr','multinomial'],
                   'max_iter':[100,200,300,400,500]}
-    grid_search = GridSearchCV(LogisticRegression(), param_grid,scoring = 'average_precision', n_jobs=-1, cv=5, refit=True)
+    grid_search = GridSearchCV(LogisticRegression(), param_grid, n_jobs=-1,  cv=5)
     grid_search.fit(X_train,y_train)
     print("Best param_grids: ", grid_search.best_params_)
     print("Best cross-validation score: ", grid_search.best_score_*100, "%")
@@ -47,7 +48,6 @@ def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = lr.predict(X_test)
     accuracy = evalModel(lr, X_test, y_test, y_pred_class)
     accuracyDict['Log_Reg_mod_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(lr, X_test, y_pred_class)
 
 # tuning the KNN model with GridSearchCV
 def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
@@ -66,7 +66,6 @@ def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = knn.predict(X_test)
     accuracy = evalModel(knn,X_test, y_test, y_pred_class)
     accuracyDict['KNN_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(knn, X_test, y_pred_class)
 
 # tuning the Decision Tree model with GridSearchCV
 def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
@@ -84,7 +83,6 @@ def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = dt.predict(X_test)
     accuracy = evalModel(dt,X_test, y_test, y_pred_class)
     accuracyDict['Decision_Tree_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(dt, X_test, y_pred_class)
 
 # tuning the Random Forest model with GridSearchCV
 def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
@@ -104,7 +102,6 @@ def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = rf.predict(X_test)
     accuracy = evalModel(rf,X_test, y_test, y_pred_class)
     accuracyDict['Random_Forest_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(rf, X_test, y_pred_class)
 
 # tuning boosting model with GridSearchCV
 def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
@@ -121,7 +118,6 @@ def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = ada.predict(X_test)
     accuracy = evalModel(ada,X_test, y_test, y_pred_class)
     accuracyDict['AdaBoost_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(ada, X_test, y_pred_class)
 
 # tuning bagging model with GridSearchCV
 def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
@@ -140,15 +136,12 @@ def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = bag.predict(X_test)
     accuracy = evalModel(bag,X_test, y_test, y_pred_class)
     accuracyDict['Bagging_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(bag, X_test, y_pred_class)
-
-# # tuning stacking model with GridSearchCV
+    
+# tuning stacking model with GridSearchCV
 def tuneStacking(X_train, X_test, y_train, y_test, accuracyDict):
     classifiers=[('rf',rf),('lr', lr),('knn', knn)]
     print("\nTuning Stacking model with GridSearchCV\n")
-    param_grid = { 
-                    'stack_method': ['predict_proba', 'decision_function', 'predict'],
-                    }
+    param_grid = {'stack_method': ['predict_proba', 'decision_function', 'predict']}
     grid_search = GridSearchCV(StackingClassifier(estimators = classifiers), param_grid, n_jobs=-1,  cv=5)
     grid_search.fit(X_train,y_train)
     print("Best param_grids: ", grid_search.best_params_)
@@ -158,6 +151,4 @@ def tuneStacking(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = stack.predict(X_test)
     accuracy = evalModel(stack,X_test,y_test, y_pred_class)
     accuracyDict['Stacking_tuning_GridSearchCV'] = accuracy * 100
-    get_csv(stack, X_test, y_pred_class)
-
-
+    get_csv_output(stack, X_test, y_pred_class)

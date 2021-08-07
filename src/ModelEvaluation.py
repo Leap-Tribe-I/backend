@@ -19,5 +19,4 @@ def evalModel(model, X_test, y_test, y_pred_class):
     # plt.xlabel("predicted")
     # plt.ylabel("Actual")
     # plt.show()
-
     return acc_score

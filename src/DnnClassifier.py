@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
-from src.OutputCsv import get_csv
+from src.output import get_csv_output
 def tensorflow_dnn(data, X_train, y_train,X_test, y_test, accuracyDict):
     labels = data.pop('suicidal_thoughts')
     ds = tf.data.Dataset.from_tensor_slices((dict(data), labels))
@@ -59,4 +59,4 @@ def tensorflow_dnn(data, X_train, y_train,X_test, y_test, accuracyDict):
         for key, value in single_prediction.items():
             if key == 'class_ids':
                 y_pred_class.append(value[0])
-    get_csv("DNNClassifier", X_test, y_pred_class)
+    get_csv_output("DNNClassifier", X_test, y_pred_class)

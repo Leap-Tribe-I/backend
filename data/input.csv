@@ -1,0 +1,104 @@
+Timestamp,family_size,annual_income,eating_habits,addiction_friend,addiction,medical_history,depressed,anxiety,happy_currently,suicidal_thoughts
+7-9-2021 19:09:05,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,No,Yes,No,No,Yes
+7-9-2021 19:10:41,Joint family(big),Below 8 Lakh,Home cooked meals,Smoking,None,No,No,Yes,No,No
+7-9-2021 19:11:25,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,No,Yes
+7-9-2021 19:12:27,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,No,No,Yes,Yes,No
+7-9-2021 19:13:45,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,Yes,Yes,No,Yes
+7-9-2021 19:15:15,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 19:23:47,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,Yes,Yes,Yes,No,No
+7-9-2021 19:25:56,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,No,No
+7-9-2021 19:29:21,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 19:33:02,Nuclear family(small),Below 8 Lakh,Irregular meals,None,None,No,No,No,Yes,No
+7-9-2021 19:34:28,Joint family(big),Below 8 Lakh,Home cooked meals,Smoking,None,Yes,No,Yes,Yes,No
+7-9-2021 19:34:41,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,No,No
+7-9-2021 19:37:02,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,No,Yes,No,No,No
+7-9-2021 19:37:41,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,No,Yes,Yes,No,Yes
+7-9-2021 19:38:26,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,No,No
+7-9-2021 19:38:40,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,No,Yes,Yes,No
+7-9-2021 19:43:28,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,No,Yes,Yes,Yes,No
+7-9-2021 19:55:03,Nuclear family(small),Below 8 Lakh,Home cooked meals,Both,None,No,Yes,No,No,No
+7-9-2021 19:58:24,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,No,No
+7-9-2021 20:03:39,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 20:05:30,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 20:06:05,Nuclear family(small),Below 8 Lakh,Mess,Alcohol,None,Yes,No,Yes,Yes,No
+7-9-2021 20:06:44,Nuclear family(small),8-15 Lakhs,Home cooked meals,Smoking,None,No,No,No,Yes,No
+7-9-2021 20:07:14,Nuclear family(small),Below 8 Lakh,Irregular meals,None,None,No,No,No,Yes,No
+7-9-2021 20:08:47,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,Yes,No,Yes,Yes,No
+7-9-2021 20:09:03,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,Yes,No,No,No,No
+7-9-2021 20:09:44,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,Yes,No,No,No,No
+7-9-2021 20:09:47,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 20:10:16,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,Yes,No,No,No,No
+7-9-2021 20:12:15,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,Yes,Yes,Yes,Yes,No
+7-9-2021 20:23:31,Joint family(big),Below 8 Lakh,Home cooked meals,Alcohol,None,No,Yes,No,No,No
+7-9-2021 20:23:45,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 20:26:32,Nuclear family(small),Below 8 Lakh,Home cooked meals,Both,None,No,No,No,Yes,No
+7-9-2021 20:40:35,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 20:46:38,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,No,Yes
+7-9-2021 20:52:47,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,Yes,Yes,Yes,Yes,No
+7-9-2021 20:59:01,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 21:04:17,Nuclear family(small),Below 8 Lakh,Home cooked meals,Smoking,None,No,No,Yes,No,No
+7-9-2021 21:05:25,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 21:05:48,Joint family(big),Above 15 Lakhs,Eat fast food frequently,Alcohol,None,No,No,No,Yes,No
+7-9-2021 21:09:06,Nuclear family(small),Below 8 Lakh,Home cooked meals,Alcohol,None,No,No,No,Yes,No
+7-9-2021 21:11:45,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,Yes,No,Yes,No
+7-9-2021 21:12:11,Nuclear family(small),Below 8 Lakh,Mess,None,None,No,No,No,Yes,No
+7-9-2021 21:20:05,Joint family(big),Above 15 Lakhs,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 21:23:06,Nuclear family(small),Below 8 Lakh,Home cooked meals,Both,None,Yes,No,Yes,Yes,Yes
+7-9-2021 21:28:11,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 21:28:29,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,Yes,Yes,Yes,No,No
+7-9-2021 21:51:37,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 21:52:35,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 22:04:21,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-9-2021 22:08:32,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,No,No
+7-9-2021 22:28:14,Nuclear family(small),Above 15 Lakhs,Home cooked meals,Alcohol,Alcohol,No,No,No,Yes,No
+7-9-2021 22:34:17,Nuclear family(small),8-15 Lakhs,Mess,Both,None,Yes,Yes,Yes,No,Yes
+7-9-2021 23:17:07,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,No,Yes,Yes,No
+7-9-2021 23:37:38,Joint family(big),Above 15 Lakhs,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 7:51:22,Joint family(big),Below 8 Lakh,Eat fast food frequently,None,None,No,Yes,No,No,No
+7-10-2021 9:25:52,Joint family(big),8-15 Lakhs,Irregular meals,None,None,Yes,No,Yes,Yes,No
+7-10-2021 9:38:57,Joint family(big),Above 15 Lakhs,Irregular meals,Both,Both,No,No,No,No,Yes
+7-10-2021 9:40:42,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,Yes,No,No,Yes
+7-10-2021 10:19:16,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,No,No,Yes,Yes,Yes
+7-10-2021 10:26:32,Nuclear family(small),Above 15 Lakhs,Home cooked meals,Both,None,No,No,Yes,Yes,No
+7-10-2021 10:44:05,Joint family(big),8-15 Lakhs,Home cooked meals,None,None,No,No,Yes,Yes,No
+7-10-2021 10:53:54,Nuclear family(small),Below 8 Lakh,Home cooked meals,Alcohol,Alcohol,No,No,No,Yes,No
+7-10-2021 10:58:23,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,No,No
+7-10-2021 10:59:37,Nuclear family(small),Below 8 Lakh,Irregular meals,None,None,No,No,No,Yes,No
+7-10-2021 11:11:55,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 11:29:26,Joint family(big),Below 8 Lakh,Home cooked meals,Alcohol,None,No,No,No,Yes,No
+7-10-2021 11:35:18,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,Yes,No
+7-10-2021 11:41:34,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,Yes,Yes,Yes,No,Yes
+7-10-2021 11:46:16,Joint family(big),Below 8 Lakh,Eat fast food frequently,None,None,No,Yes,No,Yes,No
+7-10-2021 11:52:18,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,No,Yes,Yes,No
+7-10-2021 11:55:10,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,No,Yes,Yes,Yes
+7-10-2021 11:56:55,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,Both,None,Yes,No,No,No,Yes
+7-10-2021 12:02:13,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,No,No,Yes,No
+7-10-2021 12:05:21,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 12:32:30,Nuclear family(small),Below 8 Lakh,Home cooked meals,Smoking,None,No,No,Yes,No,Yes
+7-10-2021 12:37:02,Nuclear family(small),Below 8 Lakh,Home cooked meals,Smoking,None,No,No,No,Yes,No
+7-10-2021 12:39:19,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 13:16:28,Nuclear family(small),8-15 Lakhs,Home cooked meals,Both,None,Yes,No,Yes,Yes,Yes
+7-10-2021 14:04:47,Nuclear family(small),Above 15 Lakhs,Irregular meals,None,None,No,No,No,Yes,Yes
+7-10-2021 15:21:49,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 15:51:13,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-10-2021 16:03:10,Nuclear family(small),8-15 Lakhs,Home cooked meals,Alcohol,None,Yes,Yes,Yes,No,Yes
+7-10-2021 17:09:10,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,Yes,Yes
+7-10-2021 21:46:09,Nuclear family(small),Below 8 Lakh,Irregular meals,None,None,No,No,Yes,No,Yes
+7-10-2021 22:15:34,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,Yes,Yes,No,Yes
+7-10-2021 23:58:58,Nuclear family(small),8-15 Lakhs,Home cooked meals,None,None,Yes,No,No,Yes,No
+7-11-2021 14:43:25,Nuclear family(small),Below 8 Lakh,Mess,None,Smoking,No,No,No,No,No
+7-11-2021 14:43:57,Joint family(big),Below 8 Lakh,Irregular meals,Both,Both,Yes,Yes,Yes,No,Yes
+7-12-2021 12:57:10,Nuclear family(small),Below 8 Lakh,Irregular meals,None,None,Yes,Yes,Yes,No,No
+7-12-2021 18:20:36,Nuclear family(small),Above 15 Lakhs,Eat fast food frequently,Both,Both,No,No,No,Yes,No
+7-12-2021 19:03:59,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,Yes,No,No,No
+7-12-2021 19:04:36,Joint family(big),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-12-2021 19:06:21,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,No,Yes,No
+7-12-2021 19:30:45,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,Yes,Yes,No,No
+7-12-2021 19:31:19,Nuclear family(small),8-15 Lakhs,Home cooked meals,Both,None,Yes,Yes,Yes,No,Yes
+7-12-2021 20:09:23,Joint family(big),8-15 Lakhs,Home cooked meals,None,None,No,No,Yes,Yes,Yes
+7-12-2021 20:16:32,Nuclear family(small),Below 8 Lakh,Eat fast food frequently,None,None,No,No,No,Yes,No
+7-12-2021 20:57:23,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,No,Yes,Yes,No
+7-13-2021 9:39:18,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,No,Yes,Yes,Yes,No
+7-13-2021 22:28:53,Nuclear family(small),Above 15 Lakhs,Irregular meals,None,None,Yes,Yes,Yes,No,Yes
+7-14-2021 19:32:37,Nuclear family(small),Below 8 Lakh,Home cooked meals,None,None,Yes,Yes,Yes,No,Yes
+7-15-2021 0:11:41,Nuclear family(small),Above 15 Lakhs,Home cooked meals,None,None,Yes,Yes,Yes,No,Yes
