@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,7 +11,8 @@ def get_csv_output(model, X_test, y_pred_class):
     measure = pd.DataFrame(measure)
     output_data = measure.join(y_pred)
     csv = pd.DataFrame(output_data)
-    file_name = name[0] +'.csv'
+    path = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + "/output/"
+    file_name = path + name[0] +'.csv'
     csv.to_csv(file_name, header=True)
 
 def visual_final_plot(log, kn, dis, rand, boosting, bagging):
