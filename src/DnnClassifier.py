@@ -1,12 +1,15 @@
+import time
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from src.output import get_csv_output
-def tensorflow_dnn(data, X_train, y_train,X_test, y_test, accuracyDict):
+def tensorflow_dnn(data, X_train ,X_test, y_train, y_test, accuracyDict, timelog):
+    start = time.time()
     labels = data.pop('suicidal_thoughts')
     ds = tf.data.Dataset.from_tensor_slices((dict(data), labels))
 
+    #converting pandas columns to tensorflow features
     family_size = tf.feature_column.numeric_column("family_size")
     annual_income = tf.feature_column.numeric_column("annual_income")
     eating_habits= tf.feature_column.numeric_column("eating_habits")
@@ -60,3 +63,5 @@ def tensorflow_dnn(data, X_train, y_train,X_test, y_test, accuracyDict):
             if key == 'class_ids':
                 y_pred_class.append(value[0])
     get_csv_output("DNNClassifier", X_test, y_pred_class)
+    end = time.time()
+    timelog['DNN Classifier'] = end - start

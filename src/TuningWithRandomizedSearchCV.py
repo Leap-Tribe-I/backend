@@ -5,6 +5,9 @@ with warnings.catch_warnings():
 	warnings.filterwarnings("ignore")
 	# execute code that will generate warnings
 
+#importing time logging library
+import time
+
 import numpy as np
 # importing from src
 from src.ModelEvaluation import evalModel
@@ -26,7 +29,8 @@ from sklearn.ensemble import StackingClassifier
 from scipy.stats import randint as sp_randint
 
 # Run all model in one shot
-def RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict):
+def RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict, timelog):
+    start = time.time()
     log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict)
     tuneKNN(X_train, X_test, y_train, y_test, accuracyDict)
     tuneDT(X_train, X_test, y_train, y_test, accuracyDict)
@@ -34,6 +38,8 @@ def RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict):
     tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict)
     tuneBagging(X_train, X_test, y_train, y_test, accuracyDict)
     tuneStacking(X_train, X_test, y_train, y_test, accuracyDict)
+    end = time.time()
+    timelog['Randomized models'] = end - start
 
 # tuning the logistic regression model with RandomizedSearchCV
 def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
@@ -51,6 +57,8 @@ def log_reg_mod_tuning(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = lr.predict(X_test)
     accuracy = evalModel(lr, X_test, y_test, y_pred_class)
     accuracyDict['Log_Reg_mod_tuning_RandomSearchCV'] = accuracy * 100
+    LR = 'LogisticRegressionRand'
+    get_csv_output(LR, X_test, y_pred_class)
 
 # tuning the KNN model with RandomizedSearchCV
 def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
@@ -69,6 +77,8 @@ def tuneKNN(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = knn.predict(X_test)
     accuracy = evalModel(knn, X_test, y_test, y_pred_class)
     accuracyDict['KNN_tuning_RandomSearchCV'] = accuracy * 100
+    KNN = 'KNeighborsClassifierRand'
+    get_csv_output(KNN, X_test, y_pred_class)
 
 # tuning the Decision Tree model with RandomizedSearchCV
 def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
@@ -86,6 +96,9 @@ def tuneDT(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = dt.predict(X_test)
     accuracy = evalModel(dt, X_test, y_test, y_pred_class)
     accuracyDict['Decision_Tree_tuning_RandomSearchCV'] = accuracy * 100
+    DT = 'DecisionTreeClassifierRand'
+    get_csv_output(DT, X_test, y_pred_class)
+
 
 # tuning the Random Forest model with RandomizedSearchCV
 def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
@@ -105,6 +118,8 @@ def tuneRF(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = rf.predict(X_test)
     accuracy = evalModel(rf, X_test, y_test, y_pred_class)
     accuracyDict['Random_Forest_tuning_RandomSearchCV'] = accuracy * 100
+    RF = 'RandomForestRand'
+    get_csv_output(RF, X_test, y_pred_class)
 
 # tuning boosting model with RandomizedSearchCV
 def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
@@ -122,6 +137,8 @@ def tuneBoosting(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = ada.predict(X_test)
     accuracy = evalModel(ada, X_test, y_test, y_pred_class)
     accuracyDict['AdaBoost_tuning_RandomSearchCV'] = accuracy * 100
+    ADA = 'AdaBoostClassifierRand'
+    get_csv_output(ADA, X_test, y_pred_class)
 
 # tuning bagging model with RandomizedSearchCV
 def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
@@ -140,6 +157,8 @@ def tuneBagging(X_train, X_test, y_train, y_test, accuracyDict):
     y_pred_class = bag.predict(X_test)
     accuracy = evalModel(bag, X_test, y_test, y_pred_class)
     accuracyDict['Bagging_tuning_RandomSearchCV'] = accuracy * 100
+    BAG = 'BaggingClassifierRand'
+    get_csv_output(BAG, X_test, y_pred_class)
 
 # tuning stacking model with RandomizedSearchCV
 def tuneStacking(X_train, X_test, y_train, y_test, accuracyDict):
