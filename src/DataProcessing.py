@@ -11,8 +11,9 @@ def process():
 
 def load_n_check():
     # data loading
-    #enter the location of your input file
-    input_location = input("Enter your input file location (CSV/Excel/Json Allowed): ")
+    # enter the location of your input file
+    # input_location = input("Enter your input file location (CSV/Excel/Json Allowed): ")
+    input_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/upload_dir/MHDi.xlsx"
     # check if the file exists
     while not os.path.isfile(input_location):
         print("File does not exist")
