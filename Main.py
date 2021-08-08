@@ -23,62 +23,65 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import json
-start = time.time()
-
-# data loading, checking, cleaning and encoding
-data = DataProcessing.process()
-
-'''
-- Data Cleaning nd Encoding
-- Corrlation Matrix
-- Splitting the data into training and testing
-- Feature importance
-'''
-#creating the correlation matrix
-CorrMatrix(data)
 
 
-#splitting the dataset into train and test sets
-X, y, X_train, X_test, y_train, y_test = DataSplit(data)
+def suicide():
+    start = time.time()
+
+    # data loading, checking, cleaning and encoding
+    data = DataProcessing.process()
+
+    '''
+    - Data Cleaning nd Encoding
+    - Corrlation Matrix
+    - Splitting the data into training and testing
+    - Feature importance
+    '''
+    #creating the correlation matrix
+    CorrMatrix(data)
 
 
-#visualising the feature importance
-featuring_importance(X, y)
+    #splitting the dataset into train and test sets
+    X, y, X_train, X_test, y_train, y_test = DataSplit(data)
 
-#Dictionary to store accuracy results of different algorithms
-accuracyDict = {}
 
-#Dictionary to store time log of different funcitons
-timelog = {}
+    #visualising the feature importance
+    featuring_importance(X, y)
 
-'''
-- Tuning
-'''
+    #Dictionary to store accuracy results of different algorithms
+    accuracyDict = {}
 
-# Tuning with GridSearchCV
-gscv.GridSearch(X_train, X_test, y_train, y_test, accuracyDict, timelog)
+    #Dictionary to store time log of different funcitons
+    timelog = {}
 
-# Tuning with RandomizedSearchCV
-rscv.RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict, timelog)
+    '''
+    - Tuning
+    '''
 
-#DNN implimentation 
-dnn.tensorflow_dnn(data, X_train, X_test, y_train, y_test, accuracyDict, timelog)
+    # Tuning with GridSearchCV
+    gscv.GridSearch(X_train, X_test, y_train, y_test, accuracyDict, timelog)
 
-print("accuracyDict:\n")
-print(json.dumps(accuracyDict, indent=1))
-end = time.time()
-'''
-- Accuracy Bar Graph
-'''
+    # Tuning with RandomizedSearchCV
+    rscv.RandomizedSearch(X_train, X_test, y_train, y_test, accuracyDict, timelog)
 
-# AccuracyPlot(accuracyDict)
+    #DNN implimentation 
+    dnn.tensorflow_dnn(data, X_train, X_test, y_train, y_test, accuracyDict, timelog)
 
-'''
-- Modelling
-'''
+    print("accuracyDict:\n")
+    print(json.dumps(accuracyDict, indent=1))
+    end = time.time()
+    '''
+    - Accuracy Bar Graph
+    '''
 
-end = time.time()
-print("Time Taken by Grid Search: ", timelog['GridSearch models'])
-print("Time Taken by Random Search: ", timelog['Randomized models'])
-print("Time Taken by DNN Classifier: ", timelog['DNN Classifier'])
-print("Total Time taken: ", end - start,"seconds")
+    # AccuracyPlot(accuracyDict)
+
+    '''
+    - Modelling
+    '''
+
+    end = time.time()
+    print("Time Taken by Grid Search: ", timelog['GridSearch models'])
+    print("Time Taken by Random Search: ", timelog['Randomized models'])
+    print("Time Taken by DNN Classifier: ", timelog['DNN Classifier'])
+    print("Total Time taken: ", end - start,"seconds")
