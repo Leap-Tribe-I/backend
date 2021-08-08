@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block title %}
+download
+{% endblock%}
+
+{% block body%}
+<h1>Your Download is ready</h1>
+<h2>Click below to download your output</h2>
+<form action="/download_files" method="post">
+    <button name="download" type="submit">Download</button>
+</form>
+{% endblock%}
