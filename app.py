@@ -14,6 +14,10 @@ upload_dir = os.getcwd() + "/upload_dir"
 @app.route("/upload", methods=['GET', 'POST'])
 def upload_page():
     if request.method == 'POST':
+        if len(os.listdir(upload_dir)) != 0:
+            for fname in os.listdir(upload_dir):
+                fpath = os.path.join(upload_dir, fname)
+                os.remove(fpath)
         upload_file = request.files['file']
         if upload_file.filename != '':
             upload_file.save(os.path.join(upload_dir, upload_file.filename))
