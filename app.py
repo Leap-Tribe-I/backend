@@ -1,6 +1,6 @@
 import os
 import zipfile
-from Main import suicide
+from model import suicide
 from flask import Flask, render_template, request, redirect, url_for ,send_file
 
 app = Flask(__name__)
