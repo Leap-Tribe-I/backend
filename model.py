@@ -16,7 +16,7 @@ def suicide():
     path = os.getcwd() + "/models/"
 
     # processing the data input by user
-    # X_test = DataProcessing.process()
+    X_test = DataProcessing.process()
 
 
     # creating a dictionary where binary blob of every model will be stored to their corresponding names
@@ -39,8 +39,8 @@ def suicide():
     data_dir = os.getcwd() + "/data/"
 
     # getting X_test as the input by user (y_test is temporary only for testing of accuracy scores)
-    X_test = pd.read_csv(data_dir+"xtest", index_col=0)
-    y_test = pd.read_csv(data_dir+"ytest", index_col=0)
+    # X_test = pd.read_csv(data_dir+"xtest", index_col=0)
+    # y_test = pd.read_csv(data_dir+"ytest", index_col=0)
 
     # creating a list to store all the prediciton values made by our models
     y_pred_class = []
